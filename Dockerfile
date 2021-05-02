@@ -1,17 +1,11 @@
-FROM node:12
+FROM node:14.16.0
 
-# Setting working directory. All the path will be relative to WORKDIR
 WORKDIR /usr/src/app
-
-# Installing dependencies
 COPY package*.json ./
-RUN yarn install
 
-# Copying source files
+RUN npm install
 COPY . .
+RUN npm run build
 
-# Building app
-RUN yarn build
-
-# Running the app
-CMD [ "yarn", "serve" ]
+EXPOSE 80
+CMD [ "npm", "run", "serve" ]
