@@ -30,6 +30,7 @@ function Nav() {
         src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/366be133850498.56ba69ac36858.png"
         alt="Netflix Logo"
       />
+      <h2 style={{ color: "white" }}>Hello</h2>
     </div>
   );
 }
